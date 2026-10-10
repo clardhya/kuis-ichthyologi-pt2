@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Ikhtiologi - Sistem Pencernaan</title>
+    <!-- Google Fonts untuk tipografi elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container" class="container">
+        <!-- Header Aplikasi -->
+        <header>
+            <div class="logo">🐟 Ichthyology Quiz</div>
+            <div class="theme-glow"></div>
+        </header>
+
+        <!-- Main Quiz Section (Tampilan 1 Soal) -->
+        <main id="quiz-screen" class="quiz-glass active">
+            <div class="progress-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Soal 1 dari 50</div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text">Memuat pertanyaan...</h2>
+            </div>
+
+            <div class="answer-container">
+                <input type="text" id="answer-input" placeholder="Ketik jawaban Anda di sini..." autocomplete="off">
+            </div>
+
+            <div class="controls">
+                <button id="btn-prev" class="btn btn-secondary">Previous</button>
+                <button id="btn-next" class="btn btn-primary">Next</button>
+                <button id="btn-submit" class="btn btn-accent hidden">Submit Quiz</button>
+            </div>
+        </main>
+
+        <!-- Results Section (Evaluasi & Rekap Nilai) -->
+        <main id="result-screen" class="quiz-glass hidden">
+            <h2>Evaluasi Quiz</h2>
+            <div class="score-display">
+                <div class="score-circle">
+                    <span id="score-text">0</span>%
+                </div>
+                <p id="score-description">Anda menjawab <span id="correct-count">0</span> dari 50 soal dengan benar.</p>
+            </div>
+            
+            <div class="result-breakdown" id="result-breakdown">
+                <!-- Breakdown jawaban benar & salah akan diisi via JS -->
+            </div>
+
+            <button id="btn-restart" class="btn btn-primary w-100 mt-20">Coba Lagi</button>
+        </main>
+    </div>
+
+    <!-- Script Utama -->
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
